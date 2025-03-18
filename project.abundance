@@ -181,21 +181,21 @@
                 {
                     "atomType": "Assembly",
                     "name": "Fusion",
-                    "x": 0.6324549237170596,
-                    "y": 0.7181818181818181,
+                    "x": 0.5575396825396826,
+                    "y": 0.5487465181058496,
                     "uniqueID": 1735417786863,
                     "ioValues": [
                         {
-                            "name": "Shape 1",
-                            "ioValue": 1735417720546
-                        },
-                        {
-                            "name": "Shape 2",
+                            "name": "Shape 5",
                             "ioValue": 1735417781080
                         },
                         {
-                            "name": "Shape 3",
+                            "name": "Shape 6",
                             "ioValue": 1735417764281
+                        },
+                        {
+                            "name": "Shape 7",
+                            "ioValue": 1735417720546
                         }
                     ],
                     "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
@@ -282,13 +282,13 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.7561224489795918,
-                    "y": 0.593939393939394,
+                    "x": 0.7771164021164021,
+                    "y": 0.44846796657381616,
                     "uniqueID": 1735430359059,
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": 1735417786863
+                            "ioValue": 1742322415809
                         },
                         {
                             "name": "height",
@@ -296,6 +296,29 @@
                         }
                     ],
                     "description": "Extrudes a 2D shape. Input can be negitive. "
+                },
+                {
+                    "atomType": "Fusion",
+                    "name": "Fusion",
+                    "x": 0.6329365079365079,
+                    "y": 0.8217270194986073,
+                    "uniqueID": 1742322415809,
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1735417720546
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1735417781080
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": 1735417764281
+                        }
+                    ],
+                    "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+                    "unionType": "Fusion"
                 }
             ],
             "allConnectors": [
@@ -336,9 +359,23 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "Shape 7",
+                    "ap2Primary": false,
+                    "ap1ID": 1735417720546,
+                    "ap2ID": 1735417786863
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "Shape 1",
                     "ap2Primary": false,
                     "ap1ID": 1735417720546,
+                    "ap2ID": 1742322415809
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 6",
+                    "ap2Primary": false,
+                    "ap1ID": 1735417764281,
                     "ap2ID": 1735417786863
                 },
                 {
@@ -346,6 +383,13 @@
                     "ap2Name": "Shape 3",
                     "ap2Primary": false,
                     "ap1ID": 1735417764281,
+                    "ap2ID": 1742322415809
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 5",
+                    "ap2Primary": false,
+                    "ap1ID": 1735417781080,
                     "ap2ID": 1735417786863
                 },
                 {
@@ -353,14 +397,7 @@
                     "ap2Name": "Shape 2",
                     "ap2Primary": false,
                     "ap1ID": 1735417781080,
-                    "ap2ID": 1735417786863
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1735417786863,
-                    "ap2ID": 1735430359059
+                    "ap2ID": 1742322415809
                 },
                 {
                     "ap1Name": "result",
@@ -431,6 +468,13 @@
                     "ap2Primary": false,
                     "ap1ID": 1735430359059,
                     "ap2ID": 1735417670178
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1742322415809,
+                    "ap2ID": 1735430359059
                 }
             ],
             "fileTypeVersion": 1,
@@ -3291,8 +3335,8 @@
         {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.715213358070501,
-            "y": 0.7848484848484849,
+            "x": 0.7182539682539683,
+            "y": 0.7883008356545962,
             "uniqueID": 1735668436327,
             "ioValues": [
                 {
@@ -3320,91 +3364,139 @@
             "placements": [
                 {
                     "translate": {
-                        "x": 10.850000381469727,
-                        "y": 17.09572410583496
+                        "x": 17.225000381469727,
+                        "y": 11.641667366027832
+                    },
+                    "id": 6,
+                    "rotate": 0
+                },
+                {
+                    "translate": {
+                        "x": 24.483682670141604,
+                        "y": 17.300001146435548
                     },
                     "id": 0,
-                    "rotate": 270
+                    "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 16.508334133972166,
-                        "y": 21.2014618
-                    },
-                    "id": 4,
-                    "rotate": 90
-                },
-                {
-                    "translate": {
-                        "x": 45.603188308007816,
-                        "y": 36.48333313063355
+                        "x": 17.2250004,
+                        "y": 26.32603689691162
                     },
                     "id": 3,
                     "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 23.089406031396486,
-                        "y": 30.849781514990234
+                        "x": 11.037500399999999,
+                        "y": 52.192703733972166
                     },
-                    "id": 2,
+                    "id": 14,
+                    "rotate": 90
+                },
+                {
+                    "translate": {
+                        "x": 12.9250012,
+                        "y": 49.81770368146972
+                    },
+                    "id": 7,
+                    "rotate": 270
+                },
+                {
+                    "translate": {
+                        "x": 11.037500399999999,
+                        "y": 34.642704533972164
+                    },
+                    "id": 11,
+                    "rotate": 90
+                },
+                {
+                    "translate": {
+                        "x": 59.290996218530275,
+                        "y": 17.6499996
+                    },
+                    "id": 8,
                     "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 16.79006749691162,
-                        "y": 36.362497318530274
+                        "x": 41.74099701853027,
+                        "y": 37.6499996
                     },
                     "id": 9,
-                    "rotate": 180
+                    "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 27.99006780308838,
-                        "y": 35.52645728146973
+                        "x": 66.19236381853028,
+                        "y": 16.4499988
                     },
                     "id": 10,
                     "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 19.0000019,
-                        "y": 28.853889981469727
+                        "x": 43.191808018530274,
+                        "y": 36.506871692279056
                     },
-                    "id": 5,
-                    "rotate": 270
+                    "id": 2,
+                    "rotate": 0
                 },
                 {
                     "translate": {
-                        "x": 58.5000028,
-                        "y": 22.403889218530274
+                        "x": 26.393551730761722,
+                        "y": 26.26770440800781
                     },
-                    "id": 6,
+                    "id": 4,
                     "rotate": 90
                 },
                 {
                     "translate": {
-                        "x": 44.95477292030029,
-                        "y": 23.4913129463501
+                        "x": 19.675001181469725,
+                        "y": -1.9160217077209474
                     },
-                    "id": 1,
+                    "id": 5,
                     "rotate": 180
                 },
                 {
                     "translate": {
-                        "x": 38.5000028,
-                        "y": -8.046111581469727
+                        "x": 46.087501518530274,
+                        "y": 18.32603688764648
                     },
-                    "id": 7,
+                    "id": 12,
                     "rotate": 90
                 },
                 {
                     "translate": {
-                        "x": 58.287218100000004,
-                        "y": 50.324999318530274
+                        "x": 27.051884989190675,
+                        "y": 56.362497318530274
                     },
-                    "id": 8,
+                    "id": 15,
+                    "rotate": 180
+                },
+                {
+                    "translate": {
+                        "x": 29.362503018530276,
+                        "y": 18.32603688764648
+                    },
+                    "id": 13,
                     "rotate": 90
+                },
+                {
+                    "translate": {
+                        "x": 50.52376028146973,
+                        "y": 33.309370989190676
+                    },
+                    "id": 16,
+                    "rotate": 270
+                },
+                {
+                    "translate": {
+                        "x": 35.809796830633545,
+                        "y": 21.63047179199219
+                    },
+                    "id": 1,
+                    "rotate": 270
                 }
             ]
         },
